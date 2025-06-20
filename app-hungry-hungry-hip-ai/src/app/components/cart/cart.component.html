@@ -1,0 +1,9 @@
+<p>
+  <b>Current Food Order:</b> {{ orderItemsInCart() }} items
+</p>
+<p>
+  <b>Total:</b> {{ orderItemsTotal() | currency }}
+</p>
+<p *ngFor="let item of orderItems(); let i = index">
+  {{ i + 1 }}: {{item.name}}: {{item.price | currency}}
+</p>

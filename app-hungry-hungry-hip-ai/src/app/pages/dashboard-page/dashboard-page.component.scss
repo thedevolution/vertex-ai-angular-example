@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+}
+
+.card {
+  padding: 10px;
+  margin: 10px;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  background: var(--primary);
+  color: var(--secondary);
+}
+
+
+
+section {
+  padding: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+}

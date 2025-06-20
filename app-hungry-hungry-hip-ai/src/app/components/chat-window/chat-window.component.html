@@ -1,0 +1,17 @@
+<div class="chat-container">
+  <div class="message-list" #messageList>
+    <div *ngFor="let message of messages" class="message" [ngClass]="{'sent': message.sender === 'You', 'received': message.sender !== 'You'}">
+      <div class="sender">{{ message.sender }}</div>
+      <div class="text">{{ message.text }}</div>
+    </div>
+  </div>
+  <div class="input-area">
+    <textarea
+      [(ngModel)]="newMessageText"
+      (keydown.enter)="sendMessage()"
+      placeholder="Type your message..."
+      class="message-input"
+    ></textarea>
+    <button (click)="sendMessage()" class="send-button">Send</button>
+  </div>
+</div>

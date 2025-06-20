@@ -1,0 +1,89 @@
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 40em; /* Or any desired height */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden; /* Important: hide scrollbar overflow */
+  background-color: #f9f9f9;
+  width: 60em;
+}
+
+.message-list {
+  flex: 1;
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  margin-bottom: 5px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  background-color: #e0e0e0;
+  color: #333;
+  max-width: 80%;
+  min-width: 10em;
+  align-self: flex-start;
+  position: relative; /* For timestamp positioning */
+}
+.message.sent {
+    background-color: lightblue;
+    color: #1a1a1a;
+    align-self: flex-end;
+}
+
+.message .sender {
+  font-size: 0.8em;
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+.message .text {
+    font-size: 1em;
+    padding-bottom: 2px;
+}
+
+.message .timestamp{
+    font-size: 0.7em;
+    color: #888;
+    position: absolute;
+    bottom: 2px;
+    right: 8px;
+    margin-top: 3px;
+}
+
+.input-area {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+}
+
+.message-input {
+  flex: 1;
+  border: none;
+  border-radius: 5px;
+  padding: 8px;
+  margin-right: 10px;
+  resize: none;
+  font-size: 1em;
+}
+.message-input:focus {
+    outline: none;
+    box-shadow: 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
+.send-button {
+  border: none;
+  border-radius: 5px;
+  padding: 8px 15px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.send-button:hover {
+  background-color: #0056b3;
+}

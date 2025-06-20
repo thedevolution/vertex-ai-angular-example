@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+
+ul {
+    list-style: none;
+}
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px;
+}
+
+:root {
+    --primary: white;
+    --secondary: navy;
+}
+
+
+
