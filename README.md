@@ -19,3 +19,6 @@
 1. Run `npm start` to run the project
 1. In a command window of the project, navigate to `service-hungry-hungry-hip-ai\Restaurants.API` and run `dotnet run` 
 
+## Design
+Here is a class diagram depicting the original-intended design of the system.  This approach abstracts the usage of Firebase from the UI components, allowing us to potentially swap in a different vendor-solution:
+![Angular Class Diagram](design/angular-class-diagram.png)
