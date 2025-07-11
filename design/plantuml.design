@@ -1,0 +1,49 @@
+@startuml
+namespace app.pages {
+class DashboardPage
+}
+namespace app.components {
+class CartComponent
+class ChatWindowComponent
+}
+
+namespace core.services {
+abstract class ChatService
+class RestaurantService
+}
+namespace firebase-ai.services {
+abstract class FirebaseChatService
+interface IVertexAiFunctionCall
+}
+namespace restaurant-firebase-ai.services {
+class RestaurantFirebaseChatService
+}
+namespace restaurant-firebase-ai.function-calls {
+class GetRestaurantsFunctionCall
+class AddToCartFunctionCall
+class GetMyRecentOrdersFunctionCall
+}
+
+
+
+DashboardPage o-- ChatWindowComponent
+DashboardPage o-- CartComponent
+CartComponent o-- RestaurantService
+ChatWindowComponent o-- ChatService
+RestaurantFirebaseChatService o-- RestaurantService
+@enduml
+
+
+
+
+@startuml
+
+
+
+ChatService <|-- FirebaseChatService
+FirebaseChatService <|-- RestaurantFirebaseChatService
+IVertexAiFunctionCall <|-- GetRestaurantsFunctionCall
+IVertexAiFunctionCall <|-- AddToCartFunctionCall
+IVertexAiFunctionCall <|-- GetMyRecentOrdersFunctionCall
+
+@enduml
